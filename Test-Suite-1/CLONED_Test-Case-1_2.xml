@@ -20,14 +20,40 @@
         <con:endpoint>https://cloud.bitbar.com</con:endpoint>
         <con:request/>
         <con:originalUri>https://cloud.bitbar.com/cloud/api/v2/user-sessions/login</con:originalUri>
+        <con:assertion type="DataAndMetadataAssertion" id="4068ba10-4a19-4050-9b8c-db85e77c61b3" name="Smart Assertion">
+          <con:configuration xsi:type="con:DataAndMetadataAssertion">
+            <con:mode>Received Data</con:mode>
+            <con:elements>
+              <con:path>$['message']</con:path>
+              <con:element>message</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>false</con:enabled>
+              <con:expectedValue>Incorrect username or password</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>false</con:numberType>
+              <con:expectedDataType>1</con:expectedDataType>
+            </con:elements>
+            <con:elements>
+              <con:path>$['statusCode']</con:path>
+              <con:element>statusCode</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>200</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>true</con:numberType>
+              <con:expectedDataType>2</con:expectedDataType>
+            </con:elements>
+            <con:originalMessage>{"message":"Incorrect username or password","statusCode":401}</con:originalMessage>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value=""/>
-          <con:entry key="username" value=""/>
+          <con:entry key="password" value="Equitable2020"/>
+          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
