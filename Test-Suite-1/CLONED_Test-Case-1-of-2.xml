@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="4957c8b5-b410-4292-b0d8-4b83d4c19840" keepSession="false" name="CLONED_Test Case 1_2 2 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="4957c8b5-b410-4292-b0d8-4b83d4c19840" keepSession="false" name="CLONED_Test Case 1 of 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="4957c8b5-b410-4292-b0d8-4b83d4c19840fileName">CLONED_Test-Case-1_2-2-2</con:setting>
+    <con:setting id="4957c8b5-b410-4292-b0d8-4b83d4c19840fileName">CLONED_Test-Case-1-of-2</con:setting>
   </con:settings>
   <con:testStep id="c910f396-2634-48bb-b68b-8110dfe8fd10" name="Login - Request 1" type="restrequest">
     <con:settings/>

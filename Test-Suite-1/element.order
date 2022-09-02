@@ -1,8 +1,8 @@
 Test-Case-1.xml
 Test-Case-2.xml
-CLONED_Test-Case-1_2.xml
-To_OBS_CLONED_Test-Case-1_2-2.xml
-CLONED_Test-Case-1_2-2-2.xml
-CLONED_Test-Case-1_2-2-2-2.xml
-CLONED_Test-Case-2-2.xml
-To_OBS_Test-Case-1-2.xml
+CLONED_Test-Case-1.xml
+To_OBS_CLONED_Test-Case-1.xml
+CLONED_Test-Case-1-of-2.xml
+CLONED_Test-Case-1-of-2-again.xml
+CLONED_Test-Case-2.xml
+To_OBS_Test-Case-1-original-clone.xml
