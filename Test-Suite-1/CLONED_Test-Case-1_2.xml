@@ -3,6 +3,46 @@
   <con:settings>
     <con:setting id="de701179-bc2c-446f-b35f-ce185a9564a4fileName">CLONED_Test-Case-1_2</con:setting>
   </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="8f18fa4e-a443-4931-a57f-dc8c8a5d6041">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>-1</lastSelectedProperty>
+          <GeneratorType0>CUSTOM</GeneratorType0>
+          <PropertyName0>username</PropertyName0>
+          <repetitionCountusername>0</repetitionCountusername>
+          <repeatValuesusername>false</repeatValuesusername>
+          <CustomStringDataGeneratorFormatusername>%STR(5,10,True,True,True,True)</CustomStringDataGeneratorFormatusername>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>password</PropertyName1>
+          <repetitionCountpassword>0</repetitionCountpassword>
+          <repeatValuespassword>false</repeatValuespassword>
+          <PasswordDataGeneratorUseSpacespassword>true</PasswordDataGeneratorUseSpacespassword>
+          <PasswordDataGeneratorUsePunctuationMarkspassword>true</PasswordDataGeneratorUsePunctuationMarkspassword>
+          <PasswordDataGeneratorUseLetterspassword>true</PasswordDataGeneratorUseLetterspassword>
+          <PasswordDataGeneratorUseDigitspassword>true</PasswordDataGeneratorUseDigitspassword>
+          <PasswordDataGeneratorMaxCharacterCountpassword>10</PasswordDataGeneratorMaxCharacterCountpassword>
+          <PasswordDataGeneratorMinCharacterCountpassword>5</PasswordDataGeneratorMinCharacterCountpassword>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>username</con:property>
+      <con:property>password</con:property>
+      <con:startRow>1</con:startRow>
+      <con:endRow>2</con:endRow>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+    </con:config>
+  </con:testStep>
   <con:testStep id="e2bb4e05-3b82-47ce-a98d-dc801e630829" name="Login - Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -52,8 +92,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="Equitable2020"/>
-          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
+          <con:entry key="password" value="${Data Source#password}"/>
+          <con:entry key="username" value="${Data Source#username}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
@@ -72,30 +112,6 @@
         <con:sourcePath>$['id']</con:sourcePath>
         <con:targetType>RawRequest</con:targetType>
         <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id2</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>RawRequest</con:targetType>
-        <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id3</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>Username</con:targetType>
-        <con:targetStep>Login - Request 2</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:targetTransferType>XQUERY</con:targetTransferType>
@@ -154,14 +170,22 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="Equitable2020"/>
-          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
+          <con:entry key="password" value="${Data Source#password}"/>
+          <con:entry key="username" value="${Data Source#username}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
           <con:entry>password</con:entry>
         </con:parameterOrder>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="fdba8db4-594f-43d0-b659-8b46457a6d8e">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>Login - Request 1</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
