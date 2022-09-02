@@ -78,18 +78,6 @@
         <con:upgraded>true</con:upgraded>
       </con:transfers>
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id2</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>RawRequest</con:targetType>
-        <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
         <con:name>id3</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>Login - Request 1</con:sourceStep>

@@ -66,43 +66,7 @@
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>RawRequest</con:targetType>
-        <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id2</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>RawRequest</con:targetType>
-        <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id3</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>Username</con:targetType>
-        <con:targetStep>Login - Request 2</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id4</con:name>
+        <con:name>id21</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>Login - Request 1</con:sourceStep>
         <con:sourcePath>$['id']</con:sourcePath>
@@ -121,7 +85,7 @@
       <con:properties>
         <con:property>
           <con:name>RawRequest</con:name>
-          <con:value>74676241</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
       </con:properties>
     </con:config>
