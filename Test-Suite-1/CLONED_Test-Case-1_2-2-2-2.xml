@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="de701179-bc2c-446f-b35f-ce185a9564a4" keepSession="false" name="CLONED_Test Case 1_2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="52cefd75-247a-4243-aa1a-f052cdef66f0" keepSession="false" name="CLONED_Test Case 1_2 2 2 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="de701179-bc2c-446f-b35f-ce185a9564a4fileName">CLONED_Test-Case-1_2</con:setting>
+    <con:setting id="52cefd75-247a-4243-aa1a-f052cdef66f0fileName">CLONED_Test-Case-1_2-2-2-2</con:setting>
   </con:settings>
-  <con:testStep id="e2bb4e05-3b82-47ce-a98d-dc801e630829" name="Login - Request 1" type="restrequest">
+  <con:testStep id="988723a5-5bf3-4e46-8977-64f705b215d4" name="Login - Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 1" postQueryString="false">
@@ -62,7 +62,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 1" id="5c32f890-eb50-4ffe-ad8e-89187e44d2e8">
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="de279c96-348b-4a73-9a08-a17706e840a4">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
@@ -115,7 +115,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="Test Properties" id="25d6cea9-0d61-42d5-80a2-a4ff923d170c">
+  <con:testStep type="properties" name="Test Properties" id="92843379-d5b0-4176-a2ba-1a760916dcd3">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -126,7 +126,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep id="39e1fc11-e2d3-4d51-8384-d806e93f0c49" name="Login - Request 2" type="restrequest">
+  <con:testStep id="27ec5d96-1a28-4a33-9d67-cdfbf6678e3e" name="Login - Request 2" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 2" postQueryString="false">
