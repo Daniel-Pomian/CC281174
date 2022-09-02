@@ -52,8 +52,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="Equitable2020"/>
-          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
+          <con:entry key="password" value="E23232323e2020222323232!!"/>
+          <con:entry key="username" value="readyapi@weatherapp.ca"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>

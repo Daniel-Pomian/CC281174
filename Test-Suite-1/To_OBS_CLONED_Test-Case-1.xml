@@ -52,8 +52,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="Equitable2020"/>
-          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
+          <con:entry key="password" value="prew!ord341"/>
+          <con:entry key="username" value="messages@msn.com"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
