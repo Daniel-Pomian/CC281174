@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="f6fb0233-57d7-4981-9477-60ae86cda047" keepSession="false" name="To_OBS_CLONED_Test Case 1-Dan-2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    
+  <con:setting id="f6fb0233-57d7-4981-9477-60ae86cda047fileName">To_OBS_CLONED_Test-Case-1-Dan-2</con:setting></con:settings>
+  <con:testStep id="62214070-729e-40e8-8a7d-fe30d16e202a" name="Login - Request 1" type="restrequest">
+    <con:settings/>
+    <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 1" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/612.1 (KHTML, like Gecko) JavaFX/17 Safari/612.1"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+  <con:entry key="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+</xml-fragment>]]></con:setting>
+          <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">All</con:setting>
+        </con:settings>
+        <con:endpoint>https://cloud.bitbar.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://cloud.bitbar.com/cloud/api/v2/user-sessions/login</con:originalUri>
+        <con:assertion type="DataAndMetadataAssertion" id="4068ba10-4a19-4050-9b8c-db85e77c61b3" name="Smart Assertion">
+          <con:configuration xsi:type="con:DataAndMetadataAssertion">
+            <con:mode>Received Data</con:mode>
+            <con:elements>
+              <con:path>$['message']</con:path>
+              <con:element>message</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>false</con:enabled>
+              <con:expectedValue>Incorrect username or password</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>false</con:numberType>
+              <con:expectedDataType>1</con:expectedDataType>
+            </con:elements>
+            <con:elements>
+              <con:path>$['statusCode']</con:path>
+              <con:element>statusCode</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>200</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>true</con:numberType>
+              <con:expectedDataType>2</con:expectedDataType>
+            </con:elements>
+            <con:originalMessage>{"message":"Incorrect username or password","statusCode":401}</con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="password" value="prew!ord341"/>
+          <con:entry key="username" value="messages@msn.com"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>username</con:entry>
+          <con:entry>password</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="982d326c-4b49-49b2-9eea-a98ededa325e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
+        <con:name>id21</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>Login - Request 1</con:sourceStep>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>RawRequest</con:targetType>
+        <con:targetStep>Test Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:targetTransferType>XQUERY</con:targetTransferType>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Test Properties" id="88706279-564b-489b-be24-7a6584b620ff">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>RawRequest</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="98827a84-4920-43ae-910d-6ba272ffd3d9" name="Login - Request 2" type="restrequest">
+    <con:settings/>
+    <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 2" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/612.1 (KHTML, like Gecko) JavaFX/17 Safari/612.1"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+  <con:entry key="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://cloud.bitbar.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://cloud.bitbar.com/cloud/api/v2/user-sessions/login</con:originalUri>
+        <con:assertion id="99e68711-f0c4-4e10-aad4-29359c35af0e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="password" value="Equitable2020"/>
+          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>username</con:entry>
+          <con:entry>password</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
