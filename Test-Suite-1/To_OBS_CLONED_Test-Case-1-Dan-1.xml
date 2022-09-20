@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="de701179-bc2c-446f-b35f-ce185a9564a4" keepSession="false" name="CLONED_Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" id="b48bfb0b-dad5-45d0-8d7a-5e454543e96d" keepSession="false" name="To_OBS_CLONED_Test Case 1-Dan-1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="de701179-bc2c-446f-b35f-ce185a9564a4fileName">CLONED_Test-Case-1</con:setting>
-  </con:settings>
-  <con:testStep type="datasource" name="Data Source" id="8f18fa4e-a443-4931-a57f-dc8c8a5d6041">
-    <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Data Generator">
-        <con:configuration><generatedDataCount>10</generatedDataCount><generatorsTotalNumber>2</generatorsTotalNumber><lastSelectedProperty>-1</lastSelectedProperty><GeneratorType0>CUSTOM</GeneratorType0><PropertyName0>username</PropertyName0><repetitionCountusername>0</repetitionCountusername><repeatValuesusername>false</repeatValuesusername><CustomStringDataGeneratorFormatusername>%STR(5,10,True,True,True,True)</CustomStringDataGeneratorFormatusername><GeneratorType1>STR</GeneratorType1><PropertyName1>password</PropertyName1><repetitionCountpassword>0</repetitionCountpassword><repeatValuespassword>false</repeatValuespassword><PasswordDataGeneratorUseSpacespassword>true</PasswordDataGeneratorUseSpacespassword><PasswordDataGeneratorUsePunctuationMarkspassword>true</PasswordDataGeneratorUsePunctuationMarkspassword><PasswordDataGeneratorUseLetterspassword>true</PasswordDataGeneratorUseLetterspassword><PasswordDataGeneratorUseDigitspassword>true</PasswordDataGeneratorUseDigitspassword><PasswordDataGeneratorMaxCharacterCountpassword>10</PasswordDataGeneratorMaxCharacterCountpassword><PasswordDataGeneratorMinCharacterCountpassword>5</PasswordDataGeneratorMinCharacterCountpassword><escapeSpaceSequence/></con:configuration>
-      </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
-      <con:property>username</con:property>
-      <con:property>password</con:property>
-      <con:startRow>1</con:startRow>
-      <con:endRow>2</con:endRow>
-      <con:recordsPerIteration>1</con:recordsPerIteration>
-      <con:completeLastOperation>true</con:completeLastOperation>
-      <con:trimValues>false</con:trimValues>
-      <con:entitizeValues>false</con:entitizeValues>
-      <con:restartOnRun>true</con:restartOnRun>
-      <con:expandProperties>false</con:expandProperties>
-    </con:config>
-  </con:testStep>
-  <con:testStep id="e2bb4e05-3b82-47ce-a98d-dc801e630829" name="Login - Request 1" type="restrequest">
+    
+  <con:setting id="b48bfb0b-dad5-45d0-8d7a-5e454543e96dfileName">To_OBS_CLONED_Test-Case-1-Dan-1</con:setting></con:settings>
+  <con:testStep id="59d970fe-d3c5-493d-810d-f5e854002874" name="Login - Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 1" postQueryString="false">
@@ -72,8 +52,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="${Data Source#password}"/>
-          <con:entry key="username" value="${Data Source#username}"/>
+          <con:entry key="password" value="prew!ord341"/>
+          <con:entry key="username" value="messages@msn.com"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
@@ -82,23 +62,11 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 1" id="5c32f890-eb50-4ffe-ad8e-89187e44d2e8">
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="edd5fa17-8eec-410c-b47e-474886b26ed8">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Login - Request 1</con:sourceStep>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>RawRequest</con:targetType>
-        <con:targetStep>Test Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XQUERY</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false">
-        <con:name>id4</con:name>
+        <con:name>id21</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>Login - Request 1</con:sourceStep>
         <con:sourcePath>$['id']</con:sourcePath>
@@ -111,18 +79,18 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="Test Properties" id="25d6cea9-0d61-42d5-80a2-a4ff923d170c">
+  <con:testStep type="properties" name="Test Properties" id="2b98def4-c0cb-4244-90da-c8b47b1af3ca">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
           <con:name>RawRequest</con:name>
-          <con:value>74676241</con:value>
+          <con:value xsi:nil="true"/>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep id="39e1fc11-e2d3-4d51-8384-d806e93f0c49" name="Login - Request 2" type="restrequest">
+  <con:testStep id="725d3392-cbcd-44d2-ac2c-3090aa3f3400" name="Login - Request 2" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Login" resourcePath="/cloud/api/v2/user-sessions/login" service="https://cloud.bitbar.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest id="111a2241-1aa6-4692-af8e-7d42c2b4ed54" mediaType="application/json" name="Login - Request 2" postQueryString="false">
@@ -150,22 +118,14 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="password" value="${Data Source#password}"/>
-          <con:entry key="username" value="${Data Source#username}"/>
+          <con:entry key="password" value="Equitable2020"/>
+          <con:entry key="username" value="QAToolsAdmin@equitable.ca"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
           <con:entry>password</con:entry>
         </con:parameterOrder>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="fdba8db4-594f-43d0-b659-8b46457a6d8e">
-    <con:settings/>
-    <con:config>
-      <dataSourceStep>Data Source</dataSourceStep>
-      <targetStep>Login - Request 1</targetStep>
-      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
